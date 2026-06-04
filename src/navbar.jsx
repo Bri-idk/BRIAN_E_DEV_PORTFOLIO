@@ -2,9 +2,11 @@ import "./navbar.css"
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import logoImg from './recursos/codificacion.png'
+import { translations } from './translations'
 
-function Navbar({ isDarkMode, toggleDarkMode }){
+function Navbar({ isDarkMode, toggleDarkMode, language, toggleLanguage }){
     const [isOpen, setIsOpen] = useState(false);
+    const t = translations[language].nav;
 
     const toggleMenu = () => {
         setIsOpen(!isOpen);
@@ -19,6 +21,10 @@ function Navbar({ isDarkMode, toggleDarkMode }){
           </Link>
 
           <div className="nav-right">
+            <button className="lang-toggle" onClick={toggleLanguage} title={language === 'es' ? 'Switch to English' : 'Cambiar a Español'}>
+              {language === 'es' ? 'ES' : 'EN'}
+            </button>
+
             <button className="theme-toggle" onClick={toggleDarkMode}>
               {isDarkMode ? "🌙" : "☀️"}
             </button>
@@ -31,9 +37,9 @@ function Navbar({ isDarkMode, toggleDarkMode }){
             </button>
 
             <div className={isOpen ? "nav-buttons open" : "nav-buttons"}>
-              <Link to="/contacto" className="button_nav" onClick={() => setIsOpen(false)}>Contactame</Link>
-              <Link to="/proyectos" className="button_nav" onClick={() => setIsOpen(false)}>Ver proyectos</Link>
-              <Link to="/acerca" className="button_nav" onClick={() => setIsOpen(false)}>Acerca de mi</Link>
+              <Link to="/contacto" className="button_nav" onClick={() => setIsOpen(false)}>{t.contact}</Link>
+              <Link to="/proyectos" className="button_nav" onClick={() => setIsOpen(false)}>{t.projects}</Link>
+              <Link to="/acerca" className="button_nav" onClick={() => setIsOpen(false)}>{t.about}</Link>
             </div>
           </div>
         </div>

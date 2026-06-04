@@ -190,20 +190,7 @@
   position: relative;
 }
 
-.contact-bg-icon {
-  position: absolute;
-  top: 50%;
-  right: -10%;
-  transform: translateY(-50%) rotate(-10deg);
-  width: 600px;
-  opacity: 0.03;
-  pointer-events: none;
-  z-index: -1;
-}
-
-body.dark-mode .contact-bg-icon {
-  opacity: 0.1;
-}
+/* Eliminada imagen de avión */
 
 .contact-form {
   display: flex;
@@ -390,7 +377,7 @@ body.dark-mode .contact-form textarea::placeholder {
 /* Estilos para Imagen en Acerca de Mi */
 .about-visual {
   width: 100%;
-  max-width: 700px;
+  max-width: 500px; /* Reducida aún más de 700px a 500px */
   margin: 0 auto 2rem;
   border-radius: 15px;
   overflow: hidden;
@@ -505,4 +492,22 @@ body.dark-mode .contact-form textarea::placeholder {
 @keyframes fadeIn {
   from { opacity: 0; transform: translateY(-10px); }
   to { opacity: 1; transform: translateY(0); }
+}
+
+/* Language Toggle Styles */
+.lang-toggle {
+  background: none;
+  border: 2px solid var(--accent-color);
+  color: var(--accent-color);
+  font-weight: bold;
+  padding: 0.3rem 0.6rem;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
+}
+
+.lang-toggle:hover {
+  background-color: var(--accent-color);
+  color: white;
 }

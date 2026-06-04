@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { translations } from './translations'
 import './App.css'
 
 // Imports de imágenes para CuyoX3
@@ -21,37 +22,20 @@ import totoCover from './recursos/totonik/totonik.jpeg'
 import toto1 from './recursos/totonik/totonik_2.jpeg'
 import toto2 from './recursos/totonik/totonik_3.jpeg'
 
-const PROJECTS_DATA = [
-  {
-    id: 3,
-    title: "Portafolio Personal",
-    description: "¡Tú estás aquí! También puedes ver vistazos de otros prototipos de esta misma página.",
-    images: [portCover, port1, port2],
-    url: "#",
-    isCurrent: true
-  },
-  {
-    id: 1,
-    title: "CuyoX3",
-    description: "Plataforma de servicios integrales con enfoque en gestión de áreas y atención personalizada.",
-    images: [cuyoCover, cuyo1, cuyo2],
-    url: "https://cuyox3.com"
-  },
-  {
-    id: 2,
-    title: "MafAuto",
-    description: "Sistema de catálogo y gestión automotriz con portal de clientes y panel administrativo.",
-    images: [mafCover, maf1, maf2],
-    url: "https://mafautomation.com.mx/"
-  },
-  {
-    id: 4,
-    title: "Totonik",
-    description: "Solución digital creativa con interfaces modernas y optimización de rendimiento.",
-    images: [totoCover, toto1, toto2],
-    url: "https://totonik.com"
-  }
-];
+// Mapas de imágenes para complementar la data traducida
+const PROJECT_IMAGES = {
+  3: [portCover, port1, port2],
+  1: [cuyoCover, cuyo1, cuyo2],
+  2: [mafCover, maf1, maf2],
+  4: [totoCover, toto1, toto2]
+};
+
+const PROJECT_URLS = {
+  3: "#",
+  1: "https://cuyox3.com",
+  2: "https://mafautomation.com.mx/",
+  4: "https://totonik.com"
+};
 
 function ImageModal({ src, alt, onClose }) {
   return (
@@ -64,9 +48,10 @@ function ImageModal({ src, alt, onClose }) {
   );
 }
 
-function Proyectos() {
+function Proyectos({ lang }) {
   const [selectedProject, setSelectedProject] = useState(null);
   const [modalImg, setModalImg] = useState(null);
+  const t = translations[lang].projects;
 
   const openModal = (img, alt) => {
     setModalImg({ src: img, alt: alt });
@@ -78,53 +63,59 @@ function Proyectos() {
 
   return (
     <div className="page-content">
-      <h1>Mis proyectos y proyectos en los que he trabajado</h1>
-      <p>Da un vistazo a mi trabajo y descubre si mi estilo y soluciones encajan con lo que buscas.</p>
+      <h1>{t.pageTitle}</h1>
+      <p>{t.pageSubtitle}</p>
       
       <div className="grid-placeholder">
-        {PROJECTS_DATA.map(project => (
-          <div key={project.id} className="project-card">
-            <div className="carousel-container" onClick={() => openModal(project.images[0], project.title)}>
-              <img src={project.images[0]} alt={project.title} style={{ cursor: 'zoom-in' }} />
-            </div>
-            <div className="project-info">
-              <h3>{project.title}</h3>
-              <p>{project.description}</p>
-              <button 
-                className="btn-details" 
-                onClick={() => setSelectedProject(selectedProject === project.id ? null : project.id)}
-              >
-                {selectedProject === project.id ? "Cerrar detalles" : "Ver detalles"}
-              </button>
-              
-              {selectedProject === project.id && (
-                <div className="project-details-expanded">
-                  <h4>Vistazos del proyecto:</h4>
-                  <div className="project-screenshots">
-                    {project.images.map((img, index) => (
-                      <img 
-                        key={index} 
-                        src={img} 
-                        alt={`Captura ${index + 1}`} 
-                        className="detail-thumb" 
-                        style={{ cursor: 'zoom-in' }}
-                        onClick={() => openModal(img, project.title)}
-                      />
-                    ))}
+        {t.data.map(project => {
+          const images = PROJECT_IMAGES[project.id];
+          const url = PROJECT_URLS[project.id];
+          const isCurrent = project.id === 3;
+
+          return (
+            <div key={project.id} className="project-card">
+              <div className="carousel-container" onClick={() => openModal(images[0], project.title)}>
+                <img src={images[0]} alt={project.title} style={{ cursor: 'zoom-in' }} />
+              </div>
+              <div className="project-info">
+                <h3>{project.title}</h3>
+                <p>{project.description}</p>
+                <button 
+                  className="btn-details" 
+                  onClick={() => setSelectedProject(selectedProject === project.id ? null : project.id)}
+                >
+                  {selectedProject === project.id ? t.closeDetails : t.details}
+                </button>
+                
+                {selectedProject === project.id && (
+                  <div className="project-details-expanded">
+                    <h4>{t.views}</h4>
+                    <div className="project-screenshots">
+                      {images.map((img, index) => (
+                        <img 
+                          key={index} 
+                          src={img} 
+                          alt={`Captura ${index + 1}`} 
+                          className="detail-thumb" 
+                          style={{ cursor: 'zoom-in' }}
+                          onClick={() => openModal(img, project.title)}
+                        />
+                      ))}
+                    </div>
+                    {isCurrent ? (
+                      <p className="current-hint">{t.current}</p>
+                    ) : (
+                      <>
+                        <h4>{t.link}</h4>
+                        <a href={url} target="_blank" rel="noopener noreferrer" className="social-link">{t.visit}</a>
+                      </>
+                    )}
                   </div>
-                  {project.isCurrent ? (
-                    <p className="current-hint">Estás navegando en este proyecto actualmente.</p>
-                  ) : (
-                    <>
-                      <h4>Enlace:</h4>
-                      <a href={project.url} target="_blank" rel="noopener noreferrer" className="social-link">Visitar Sitio</a>
-                    </>
-                  )}
-                </div>
-              )}
+                )}
+              </div>
             </div>
-          </div>
-        ))}
+          );
+        })}
       </div>
 
       {modalImg && (
