@@ -27,14 +27,14 @@ const PROJECTS_DATA = [
     title: "CuyoX3",
     description: "Plataforma de servicios integrales con enfoque en gestión de áreas y atención personalizada.",
     images: [cuyoCover, cuyo1, cuyo2],
-    url: "https://cuyox3.example.com"
+    url: "https://cuyox3.com"
   },
   {
     id: 2,
     title: "MafAuto",
     description: "Sistema de catálogo y gestión automotriz con portal de clientes y panel administrativo.",
     images: [mafCover, maf1, maf2],
-    url: "https://mafauto.example.com"
+    url: "https://mafautomation.com.mx/"
   },
   {
     id: 3,
@@ -49,23 +49,43 @@ const PROJECTS_DATA = [
     title: "Totonik",
     description: "Solución digital creativa con interfaces modernas y optimización de rendimiento.",
     images: [totoCover, toto1, toto2],
-    url: "https://totonik.example.com"
+    url: "https://totonik.com"
   }
 ];
 
+function ImageModal({ src, alt, onClose }) {
+  return (
+    <div className="modal-overlay" onClick={onClose}>
+      <div className="modal-content" onClick={(e) => e.stopPropagation()}>
+        <button className="modal-close" onClick={onClose}>&times;</button>
+        <img src={src} alt={alt} className="modal-image" />
+      </div>
+    </div>
+  );
+}
+
 function Proyectos() {
   const [selectedProject, setSelectedProject] = useState(null);
+  const [modalImg, setModalImg] = useState(null);
+
+  const openModal = (img, alt) => {
+    setModalImg({ src: img, alt: alt });
+  };
+
+  const closeModal = () => {
+    setModalImg(null);
+  };
 
   return (
     <div className="page-content">
       <h1>Mis Proyectos</h1>
-      <p>Explora mis trabajos más recientes. Haz clic para ver detalles y capturas de pantalla.</p>
+      <p>Explora mis trabajos más recientes. Haz clic en las imágenes para ampliarlas.</p>
       
       <div className="grid-placeholder">
         {PROJECTS_DATA.map(project => (
           <div key={project.id} className="project-card">
-            <div className="carousel-container">
-              <img src={project.images[0]} alt={project.title} />
+            <div className="carousel-container" onClick={() => openModal(project.images[0], project.title)}>
+              <img src={project.images[0]} alt={project.title} style={{ cursor: 'zoom-in' }} />
             </div>
             <div className="project-info">
               <h3>{project.title}</h3>
@@ -81,8 +101,15 @@ function Proyectos() {
                 <div className="project-details-expanded">
                   <h4>Vistazos del proyecto:</h4>
                   <div className="project-screenshots">
-                    {project.images.slice(1).map((img, index) => (
-                      <img key={index} src={img} alt={`Captura ${index + 1}`} className="detail-thumb" />
+                    {project.images.map((img, index) => (
+                      <img 
+                        key={index} 
+                        src={img} 
+                        alt={`Captura ${index + 1}`} 
+                        className="detail-thumb" 
+                        style={{ cursor: 'zoom-in' }}
+                        onClick={() => openModal(img, project.title)}
+                      />
                     ))}
                   </div>
                   {project.isCurrent ? (
@@ -99,6 +126,14 @@ function Proyectos() {
           </div>
         ))}
       </div>
+
+      {modalImg && (
+        <ImageModal 
+          src={modalImg.src} 
+          alt={modalImg.alt} 
+          onClose={closeModal} 
+        />
+      )}
     </div>
   )
 }
