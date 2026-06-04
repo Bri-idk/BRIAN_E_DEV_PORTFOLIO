@@ -23,6 +23,8 @@ const PROJECTS_DATA = [
 ];
 
 function Proyectos() {
+  const [selectedProject, setSelectedProject] = useState(null);
+
   return (
     <div className="page-content">
       <h1>Mis Proyectos</h1>
@@ -33,12 +35,25 @@ function Proyectos() {
           <div key={project.id} className="project-card">
             <div className="carousel-container">
               <img src={project.images[0]} alt={project.title} />
-              {/* Aquí iría la lógica del carrusel con flechas en el futuro */}
             </div>
             <div className="project-info">
               <h3>{project.title}</h3>
               <p>{project.description}</p>
-              <button className="btn-details">Ver más detalles</button>
+              <button 
+                className="btn-details" 
+                onClick={() => setSelectedProject(selectedProject === project.id ? null : project.id)}
+              >
+                {selectedProject === project.id ? "Cerrar detalles" : "Ver detalles"}
+              </button>
+              
+              {selectedProject === project.id && (
+                <div className="project-details-expanded">
+                  <h4>Tecnologías:</h4>
+                  <p>React, Node.js, CSS Modules</p>
+                  <h4>Enlace:</h4>
+                  <a href="#" className="social-link">Visitar Sitio</a>
+                </div>
+              )}
             </div>
           </div>
         ))}

@@ -1,25 +1,12 @@
 import "./navbar.css"
-import { useState, useEffect } from 'react'
+import { useState } from 'react'
 import { Link } from 'react-router-dom'
 
-function Navbar(){
+function Navbar({ isDarkMode, toggleDarkMode }){
     const [isOpen, setIsOpen] = useState(false);
-    const [isDarkMode, setIsDarkMode] = useState(false);
-
-    useEffect(() => {
-        if (isDarkMode) {
-            document.body.classList.add('dark-mode');
-        } else {
-            document.body.classList.remove('dark-mode');
-        }
-    }, [isDarkMode]);
 
     const toggleMenu = () => {
         setIsOpen(!isOpen);
-    };
-
-    const toggleDarkMode = () => {
-        setIsDarkMode(!isDarkMode);
     };
 
     return(

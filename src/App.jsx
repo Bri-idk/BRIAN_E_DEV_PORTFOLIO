@@ -1,3 +1,4 @@
+import { useState, useEffect } from 'react'
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom'
 import Navbar from './navbar.jsx'
 import Proyectos from './Proyectos.jsx'
@@ -33,10 +34,29 @@ function Hero() {
 }
 
 function App() {
+  const [isDarkMode, setIsDarkMode] = useState(() => {
+    const savedTheme = localStorage.getItem('theme');
+    return savedTheme === 'dark';
+  });
+
+  useEffect(() => {
+    if (isDarkMode) {
+      document.body.classList.add('dark-mode');
+      localStorage.setItem('theme', 'dark');
+    } else {
+      document.body.classList.remove('dark-mode');
+      localStorage.setItem('theme', 'light');
+    }
+  }, [isDarkMode]);
+
+  const toggleDarkMode = () => {
+    setIsDarkMode(prev => !prev);
+  };
+
   return (
     <Router>
       <div className="app-container">
-        <Navbar />
+        <Navbar isDarkMode={isDarkMode} toggleDarkMode={toggleDarkMode} />
         <div className="separador"></div>
 
         <main id="body">

@@ -185,6 +185,13 @@
   gap: 1.5rem;
   max-width: 600px;
   margin-top: 3rem;
+  width: 100%;
+}
+
+.form-actions {
+  display: flex;
+  justify-content: flex-start;
+  width: 100%;
 }
 
 .contact-form input, .contact-form textarea {
@@ -197,9 +204,26 @@
   font-size: 1rem;
 }
 
+.contact-form input::placeholder, .contact-form textarea::placeholder {
+  color: #555;
+}
+
+body.dark-mode .contact-form input::placeholder, 
+body.dark-mode .contact-form textarea::placeholder {
+  color: #aaa;
+}
+
 .contact-form textarea {
   min-height: 180px;
   resize: vertical;
+}
+
+/* Unificar fuente de Mi Historia con Acerca de Mi */
+.page-content section h2 {
+  font-family: 'Segoe UI', sans-serif;
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-top: 2rem;
 }
 
 /* Responsividad para la sección Hero */
@@ -242,6 +266,10 @@
     width: 100%;
     text-align: center;
     margin: 0;
+  }
+
+  .form-actions {
+    justify-content: center;
   }
 }
 
@@ -298,11 +326,32 @@
   margin-bottom: 2rem;
   border-radius: 15px;
   overflow: hidden;
-  height: 300px;
+  height: auto;
+  display: flex;
+  justify-content: center;
 }
 
 .about-visual img {
   width: 100%;
-  height: 100%;
-  object-fit: cover;
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+.project-details-expanded {
+  margin-top: 1.5rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--border-color);
+  animation: fadeIn 0.3s ease;
+}
+
+.project-details-expanded h4 {
+  margin: 1rem 0 0.5rem 0;
+  font-size: 1rem;
+  color: var(--accent-color);
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
 }

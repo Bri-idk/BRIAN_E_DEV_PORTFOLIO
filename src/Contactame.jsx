@@ -9,7 +9,9 @@ function Contactame() {
         <input type="text" placeholder="Tu Nombre" />
         <input type="email" placeholder="Tu Email" />
         <textarea placeholder="Tu Mensaje"></textarea>
-        <button type="submit" className="btn-primary">Enviar Mensaje</button>
+        <div className="form-actions">
+          <button type="submit" className="btn-primary">Enviar Mensaje</button>
+        </div>
       </form>
     </div>
   )
