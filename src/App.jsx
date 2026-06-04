@@ -4,7 +4,7 @@ import Navbar from './navbar.jsx'
 import Proyectos from './Proyectos.jsx'
 import AcercaDeMi from './AcercaDeMi.jsx'
 import Contactame from './Contactame.jsx'
-import heroImg from './recursos/codificacion.png'
+import heroImg from './recursos/personal.png'
 import { translations } from './translations'
 import './App.css'
 
