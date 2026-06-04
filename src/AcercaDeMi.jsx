@@ -1,4 +1,4 @@
-import aboutImg from './recursos/codificacion.png'
+import aboutImg from './recursos/personal.jpg'
 import './App.css'
 
 function AcercaDeMi() {

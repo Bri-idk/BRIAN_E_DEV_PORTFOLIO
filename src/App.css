@@ -338,6 +338,34 @@ body.dark-mode .contact-form textarea::placeholder {
   object-fit: contain;
 }
 
+.project-screenshots {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+  overflow-x: auto;
+  padding: 0.5rem 0;
+}
+
+.detail-thumb {
+  width: 150px;
+  height: 85px;
+  object-fit: cover;
+  border-radius: 6px;
+  border: 1px solid var(--border-color);
+  transition: transform 0.2s;
+}
+
+.detail-thumb:hover {
+  transform: scale(1.05);
+}
+
+.current-hint {
+  font-style: italic;
+  color: var(--accent-color);
+  font-weight: 600;
+  margin-top: 1rem;
+}
+
 .project-details-expanded {
   margin-top: 1.5rem;
   padding-top: 1rem;
