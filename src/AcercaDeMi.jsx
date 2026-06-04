@@ -1,3 +1,4 @@
+import aboutImg from './recursos/codificacion.png'
 import './App.css'
 
 function AcercaDeMi() {
@@ -11,7 +12,7 @@ function AcercaDeMi() {
          diseñar bases de datos optimizadas y construir interfaces 
          interactivas que ofrezcan una excelente experiencia de usuario.</p>
       <div className="about-visual">
-        <img src="./recursos/codificacion.png" alt="Espacio de trabajo" />
+        <img src={aboutImg} alt="Espacio de trabajo" />
       </div>
 
       <section>

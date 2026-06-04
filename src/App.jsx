@@ -4,6 +4,7 @@ import Navbar from './navbar.jsx'
 import Proyectos from './Proyectos.jsx'
 import AcercaDeMi from './AcercaDeMi.jsx'
 import Contactame from './Contactame.jsx'
+import heroImg from './recursos/codificacion.png'
 import './App.css'
 
 function Hero() {
@@ -26,7 +27,7 @@ function Hero() {
 
       <div className="hero-image">
         <div className="image-wrapper">
-          <img src="./recursos/codificacion.png" alt="Hero representation" />
+          <img src={heroImg} alt="Hero representation" />
         </div>
       </div>
     </section>

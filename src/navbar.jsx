@@ -1,6 +1,7 @@
 import "./navbar.css"
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
+import logoImg from './recursos/codificacion.png'
 
 function Navbar({ isDarkMode, toggleDarkMode }){
     const [isOpen, setIsOpen] = useState(false);
@@ -13,7 +14,7 @@ function Navbar({ isDarkMode, toggleDarkMode }){
         <nav id="navbar">
         <div className="contenedor">
           <Link to="/" className="brand" onClick={() => setIsOpen(false)}>
-            <img className="icono" src={"./recursos/codificacion.png"} width={45} height={45} alt="" />
+            <img className="icono" src={logoImg} width={45} height={45} alt="" />
             <h2 className="logo-text">BrianE Dev</h2>
           </Link>
 

@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import projectImg from './recursos/codificacion.png'
 import './App.css'
 
 const PROJECTS_DATA = [
@@ -6,19 +7,19 @@ const PROJECTS_DATA = [
     id: 1,
     title: "E-Commerce App",
     description: "Una plataforma completa con carrito de compras y pagos integrados.",
-    images: ["./recursos/codificacion.png"]
+    images: [projectImg]
   },
   {
     id: 2,
     title: "Portfolio v1",
     description: "Mi primer portfolio interactivo enfocado en animaciones fluidas.",
-    images: ["./recursos/codificacion.png"]
+    images: [projectImg]
   },
   {
     id: 3,
     title: "SaaS Dashboard",
     description: "Panel de administración para gestión de datos en tiempo real.",
-    images: ["./recursos/codificacion.png"]
+    images: [projectImg]
   }
 ];
 
