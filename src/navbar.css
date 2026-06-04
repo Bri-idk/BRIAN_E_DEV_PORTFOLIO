@@ -74,13 +74,15 @@
   font-weight: 700;
   cursor: pointer;
   color: var(--text-color, #333);
+  opacity: 0.7; /* Opaco en reposo */
   outline: none;
   text-decoration: none;
-  transition: color 0.3s ease;
+  transition: opacity 0.3s ease, color 0.3s ease;
 }
 
 .button_nav:hover {
-  opacity: 0.7;
+  opacity: 1; /* Full color en hover */
+  color: var(--accent-color);
 }
 
 /* Hamburguesa */

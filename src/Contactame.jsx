@@ -1,5 +1,6 @@
 import { useState, useRef } from 'react'
 import emailjs from '@emailjs/browser'
+import avionImg from './recursos/avion.png'
 import './App.css'
 
 function Contactame() {
@@ -24,7 +25,10 @@ function Contactame() {
   };
 
   return (
-    <div className="page-content">
+    <div className="page-content contact-container">
+      {/* Icono de avión de fondo */}
+      <img src={avionImg} alt="" className="contact-bg-icon" />
+
       <h1>Contáctame</h1>
       <p>¿Tienes un proyecto en mente o una vacante? ¡Hablemos!</p>
       

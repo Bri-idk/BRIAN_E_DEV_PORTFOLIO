@@ -67,7 +67,7 @@
   border-radius: 8px;
   cursor: pointer;
   display: inline-block;
-  transition: transform 0.2s;
+  transition: transform 0.2s, background-color 0.2s;
 }
 
 .btn-secondary {
@@ -84,7 +84,7 @@
 
 .btn-primary:hover {
   transform: translateY(-3px);
-  filter: brightness(1.2);
+  background-color: var(--accent-hover);
 }
 
 .btn-primary:disabled {
@@ -176,15 +176,35 @@
 }
 
 .card {
-  background-color: var(--border-color);
+  background-color: var(--card-bg);
   padding: 4rem 2rem;
   border-radius: 12px;
   text-align: center;
   font-weight: bold;
   font-size: 1.2rem;
+  border: 1px solid var(--border-color);
 }
 
 /* Contacto Styles */
+.contact-container {
+  position: relative;
+}
+
+.contact-bg-icon {
+  position: absolute;
+  top: 50%;
+  right: -10%;
+  transform: translateY(-50%) rotate(-10deg);
+  width: 600px;
+  opacity: 0.03;
+  pointer-events: none;
+  z-index: -1;
+}
+
+body.dark-mode .contact-bg-icon {
+  opacity: 0.1;
+}
+
 .contact-form {
   display: flex;
   flex-direction: column;
@@ -315,13 +335,14 @@ body.dark-mode .contact-form textarea::placeholder {
 
 /* Estilos para Carrusel en Proyectos */
 .project-card {
-  background-color: var(--border-color);
+  background-color: var(--card-bg);
   border-radius: 12px;
   overflow: hidden;
   transition: transform 0.3s ease;
   cursor: pointer;
   display: flex;
   flex-direction: column;
+  border: 1px solid var(--border-color);
 }
 
 .project-card:hover {
@@ -358,13 +379,19 @@ body.dark-mode .contact-form textarea::placeholder {
   border: none;
   border-radius: 4px;
   cursor: pointer;
+  transition: background-color 0.2s;
+  font-weight: 600;
+}
+
+.btn-details:hover {
+  background-color: var(--accent-hover);
 }
 
 /* Estilos para Imagen en Acerca de Mi */
 .about-visual {
   width: 100%;
-  max-width: 700px; /* Reducida la anchura máxima */
-  margin: 0 auto 2rem; /* Centrada */
+  max-width: 700px;
+  margin: 0 auto 2rem;
   border-radius: 15px;
   overflow: hidden;
   height: auto;
