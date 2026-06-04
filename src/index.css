@@ -4,6 +4,10 @@ h2{
   font-family: "Consolas", "Courier New", monospace;
   font-style: normal;
 }
+a{
+  color: purple;
+  text-decoration: none;
+}
 
 :root {
   --bg-color: #ffffff;

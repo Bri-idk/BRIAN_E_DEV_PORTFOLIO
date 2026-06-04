@@ -23,6 +23,14 @@ import toto2 from './recursos/totonik/totonik_3.jpeg'
 
 const PROJECTS_DATA = [
   {
+    id: 3,
+    title: "Portafolio Personal",
+    description: "¡Tú estás aquí! También puedes ver vistazos de otros prototipos de esta misma página.",
+    images: [portCover, port1, port2],
+    url: "#",
+    isCurrent: true
+  },
+  {
     id: 1,
     title: "CuyoX3",
     description: "Plataforma de servicios integrales con enfoque en gestión de áreas y atención personalizada.",
@@ -35,14 +43,6 @@ const PROJECTS_DATA = [
     description: "Sistema de catálogo y gestión automotriz con portal de clientes y panel administrativo.",
     images: [mafCover, maf1, maf2],
     url: "https://mafautomation.com.mx/"
-  },
-  {
-    id: 3,
-    title: "Portafolio Personal",
-    description: "¡Tú estás aquí! También puedes ver vistazos de otros prototipos de esta misma página.",
-    images: [portCover, port1, port2],
-    url: "#",
-    isCurrent: true
   },
   {
     id: 4,
@@ -78,8 +78,8 @@ function Proyectos() {
 
   return (
     <div className="page-content">
-      <h1>Mis Proyectos</h1>
-      <p>Explora mis trabajos más recientes. Haz clic en las imágenes para ampliarlas.</p>
+      <h1>Mis proyectos y proyectos en los que he trabajado</h1>
+      <p>Da un vistazo a mi trabajo y descubre si mi estilo y soluciones encajan con lo que buscas.</p>
       
       <div className="grid-placeholder">
         {PROJECTS_DATA.map(project => (

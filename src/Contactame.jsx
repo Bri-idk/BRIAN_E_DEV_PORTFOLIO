@@ -57,6 +57,7 @@ function Contactame() {
       <section className="direct-contact">
         <h2>Contacto Directo</h2>
         <p>Email: <a href="mailto:briane.pinedamartineza@gmail.com" className="social-link">briane.pinedamartineza@gmail.com</a></p>
+        <p>Quizas te interese: </p><a href="cuyox3.com">CuyoX3</a>
       </section>
     </div>
   )
