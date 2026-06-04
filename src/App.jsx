@@ -76,10 +76,9 @@ function App() {
               <p>© {new_string_date} BrianE Dev. Todos los derechos reservados.</p>
             </div>
             <div className="footer-socials">
-              <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="social-link">LinkedIn</a>
-              <a href="https://github.com" target="_blank" rel="noopener noreferrer" className="social-link">GitHub</a>
-              <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="social-link">X / Twitter</a>
-              <a href="mailto:tuemail@ejemplo.com" className="social-link">Email</a>
+              <a href="https://www.linkedin.com/in/brian-pineda-martinez-dev/" target="_blank" rel="noopener noreferrer" className="social-link">LinkedIn</a>
+              <a href="https://github.com/Bri-idk?tab=repositories" target="_blank" rel="noopener noreferrer" className="social-link">GitHub</a>
+              <a href="https://mail.google.com/mail/?view=cm&fs=1&to=briane.pinedamartinez@gmail.com" className="social-link">Email</a>
             </div>
           </div>
         </footer>

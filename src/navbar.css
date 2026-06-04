@@ -12,9 +12,9 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 93%;
+  width: 99%;
   margin: 0 auto;
-  padding: 0 1rem;
+  padding: 0 0rem;
 }
 
 .brand {
