@@ -1,4 +1,4 @@
-import aboutImg from './recursos/codificacion.png'
+import aboutImg from './recursos/personal.png'
 import { translations } from './translations'
 import './App.css'
 

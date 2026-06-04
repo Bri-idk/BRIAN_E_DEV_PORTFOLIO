@@ -5,8 +5,9 @@ h2{
   font-style: normal;
 }
 a{
-  color: purple;
+  color: blue;
   text-decoration: none;
+  font-weight: 700;
 }
 
 :root {

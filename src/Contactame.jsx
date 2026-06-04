@@ -57,8 +57,8 @@ function Contactame({ lang }) {
 
       <section className="direct-contact">
         <h2>{t.direct}</h2>
-        <p>Email: <a href="mailto:briane.pinedamartineza@gmail.com" className="social-link">briane.pinedamartineza@gmail.com</a></p>
-        <p>{t.interest} <a href="https://cuyox3.com" target="_blank" rel="noopener noreferrer" className="social-link">CuyoX3</a></p>
+        <p>Email: <a href="mailto:briane.pinedamartineza@gmail.com" className="social-cuyox3">briane.pinedamartineza@gmail.com</a></p>
+        <p>{t.interest} <a href="https://cuyox3.com" target="_blank" rel="noopener noreferrer" className="cuyox3">CuyoX3</a></p>
       </section>
     </div>
   )
