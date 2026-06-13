@@ -79,7 +79,6 @@ function App() {
           language={language} 
           toggleLanguage={toggleLanguage} 
         />
-        <div className="separador"></div>
 
         <main id="body">
           <Routes>
@@ -96,6 +95,7 @@ function App() {
               <h3>BrianE Dev</h3>
               <p>© {new_string_date} BrianE Dev. {tFooter.rights}</p>
             </div>
+
             <div className="footer-socials">
               <a href="https://www.linkedin.com/in/brian-pineda-martinez-dev/" target="_blank" rel="noopener noreferrer" className="social-link">LinkedIn</a>
               <a href="https://github.com/Bri-idk?tab=repositories" target="_blank" rel="noopener noreferrer" className="social-link">GitHub</a>

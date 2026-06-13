@@ -1,14 +1,14 @@
 export const translations = {
   es: {
     nav: {
-      contact: "Contactame",
+      contact: "Contáctame",
       projects: "Ver proyectos",
       about: "Acerca de mi"
     },
     hero: {
-      title: "Desarrollador",
-      subtitle: "Full Stack & UI Designer",
-      description: "Hola, soy Brian. Me especializo en crear experiencias digitales únicas, combinando código limpio con diseños modernos y funcionales.",
+      title: "Brian Pineda",
+      subtitle: "Especialista en Python/Django & Full Stack",
+      description: "Hola, soy Brian. Desarrollador Full Stack enfocado en soluciones escalables, eficientes y automatizadas. Especializado en el ecosistema Python/Django, bases de datos SQL y reingeniería visual industrial-premium.",
       projectsBtn: "Mis Proyectos",
       moreBtn: "Saber más"
     },
@@ -25,30 +25,37 @@ export const translations = {
         {
           id: 3,
           title: "Portafolio Personal",
-          description: "¡Tú estás aquí! También puedes ver vistazos de otros prototipos de esta misma página. El enfoque de la página es mostrar mi trabajo, puedes ver la estructura de esta página en mi GitHub.",
+          description: "Mi espacio digital. Desarrollado en React, optimizado detalladamente en responsividad móvil, velocidad y accesibilidad para presentar mi identidad profesional. Código abierto en mi GitHub.",
         },
         {
           id: 1,
           title: "CuyoX3",
-          description: "Plataforma de servicios integrales orientada a la automatización. En CuyoX3 formé mi lógica de programación, la gestión de los proyectos y la estructuración de proyectos fullstack colaborativos.",
+          description: "Plataforma de automatización e identidad digital. Como Líder Tecnológico, diseñé y desplegué de extremo a extremo la infraestructura en la nube y la web corporativa, dirigiendo proyectos clave.",
         },
         {
           id: 2,
           title: "MafAuto",
-          description: "Esta es una web app integral (full-stack). Diseñé tanto el scrolling telling como la login page, usé tecnologías como Python, React, Django, Npm y pulí mis habilidades de pensamiento lógico avanzado en programación.",
+          description: "Web app full-stack de automatización. Diseñé e implementé la lógica compleja del backend y la integración de datos mediante APIs REST con Django, reduciendo significativamente errores industriales.",
         },
         {
           id: 4,
           title: "Totonik",
-          description: "Con esta web aprendí el uso de herramientas como Wix, que me dejó enfocarme en el diseño de la página y no tanto en el código, permitiéndome dar un buen diseño al término del trabajo.",
+          description: "Rediseño completo de marca enfocado en ingeniería de alta gama ('Ingeniería aplicada a las brasas'). Desarrollé la interfaz responsiva con una estética minimalista industrial-premium.",
         }
       ]
     },
     about: {
       title: "Acerca de Mí",
-      description: "Soy un desarrollador Full Stack especializado en el ecosistema Python, con un enfoque particular en la creación de soluciones escalables, robustas y eficientes utilizando Django. Me apasiona estructurar arquitecturas backend sólidas, diseñar bases de datos optimizadas y construir interfaces interactivas que ofrezcan una excelente experiencia de usuario.",
+      description: "Soy un desarrollador Full Stack especializado en el ecosistema Python/Django, bases de datos SQL (PostgreSQL, MySQL) y APIs REST. Me apasiona estructurar arquitecturas backend robustas e implementar reingeniería visual (UI/UX Mobile First) con estética industrial-premium. Cuento con inglés C1 Avanzado certificado.",
       historyTitle: "Mi Historia",
-      historyText: "Empecé en el mundo del desarrollo web de manera autónoma, motivado por el deseo de construir mis propias herramientas y entender el \"detrás de escena\" del software. Lo que comenzó como un reto personal de lógica se convirtió en mi profesión; hoy en día, esa mentalidad autodidacta me permite adaptarme rápidamente a nuevos entornos técnicos, colaborar de forma efectiva en equipos ágiles y aportar valor real en cada línea de código que escribo."
+      historyText: "Comencé en el desarrollo web de manera autodidacta por el reto lógico de construir mis propias herramientas. Hoy en día, lidero transformaciones digitales y la creación de plataformas web complejas en CuyoX3. Mi formación tecnológica, capacidad analítica y atención meticulosa al detalle me permiten adaptarme rápidamente a entornos ágiles y aportar soluciones óptimas de alto rendimiento.",
+      cvLink: "¡Mi CV aquí!",
+      certificationsTitle: "Certificaciones",
+      englishCert: "Inglés EF SET: C1 Avanzado (69/100)",
+      englishDesc: "Comprensión lectora C2 Proficiente y auditiva C1 Avanzado (Junio 2026).",
+      pythonCert: "Universidad Python: Udemy (86.5 hrs)",
+      pythonDesc: "Programación avanzada, estructuras de datos, lógica y optimización orientada a objetos (Diciembre 2024).",
+      verify: "Verificar certificado"
     },
     contact: {
       title: "Contáctame",
@@ -74,9 +81,9 @@ export const translations = {
       about: "About Me"
     },
     hero: {
-      title: "Developer",
-      subtitle: "Full Stack & UI Designer",
-      description: "Hi, I'm Brian. I specialize in creating unique digital experiences, combining clean code with modern and functional designs.",
+      title: "Brian Pineda",
+      subtitle: "Python/Django Specialist & Full Stack Developer",
+      description: "Hi, I'm Brian. A Full Stack Developer focused on building scalable, efficient, and automated solutions. Specialized in Python/Django, SQL databases, and industrial-premium UI/UX design.",
       projectsBtn: "My Projects",
       moreBtn: "Learn More"
     },
@@ -93,30 +100,37 @@ export const translations = {
         {
           id: 3,
           title: "Personal Portfolio",
-          description: "You are here! You can also see glimpses of other prototypes of this same page. The focus of the page is to show my work, you can see the structure of this page on my GitHub.",
+          description: "My personal digital space. Built with React and meticulously optimized for mobile responsiveness, performance, and accessibility. Complete codebase is open source on GitHub.",
         },
         {
           id: 1,
           title: "CuyoX3",
-          description: "Comprehensive services platform oriented towards automation. At CuyoX3 I formed my programming logic, project management, and the structuring of collaborative fullstack projects.",
+          description: "Automation and digital identity platform. As Tech Lead, I designed and developed the corporate web presence and cloud infrastructure from end to end, leading core integrations.",
         },
         {
           id: 2,
           title: "MafAuto",
-          description: "This is a full-stack web app. I designed both the scrolling telling and the login page, used technologies like Python, React, Django, Npm and polished my advanced logical thinking skills in programming.",
+          description: "Industrial full-stack automation web app. I designed and implemented complex backend logic and REST API integrations with Django, significantly reducing execution errors.",
         },
         {
           id: 4,
           title: "Totonik",
-          description: "With this website I learned to use tools like Wix, which let me focus on the design of the page and not so much on the code, allowing me to deliver a good design at the end of the work.",
+          description: "Complete visual rebranding for advanced grilling equipment ('Engineering applied to the grill'). Built the minimalist responsive UI with an industrial-premium aesthetic.",
         }
       ]
     },
     about: {
       title: "About Me",
-      description: "I am a Full Stack developer specialized in the Python ecosystem, with a particular focus on creating scalable, robust, and efficient solutions using Django. I am passionate about structuring solid backend architectures, designing optimized databases, and building interactive interfaces that offer an excellent user experience.",
+      description: "I am a Full Stack Developer specialized in the Python/Django ecosystem, REST architectures, and SQL databases (PostgreSQL, MySQL). I focus on building solid backend code and high-performance, mobile-first responsive interfaces with an industrial-premium aesthetic. Certified C1 Advanced English speaker.",
       historyTitle: "My Story",
-      historyText: "I started in the world of web development autonomously, motivated by the desire to build my own tools and understand the \"behind the scenes\" of software. What began as a personal logic challenge became my profession; today, that self-taught mindset allows me to quickly adapt to new technical environments, collaborate effectively in agile teams, and contribute real value in every line of code I write."
+      historyText: "I entered the software development field autonomously, driven by the analytical challenge of writing efficient tools. Today, I lead digital transformations, cloud architecture deployments, and complex web integrations at CuyoX3. My technological background, sharp problem-solving capabilities, and meticulous attention to detail enable me to adapt to agile teams and deliver clean code.",
+      cvLink: "My CV here!",
+      certificationsTitle: "Certifications",
+      englishCert: "EF SET English: C1 Advanced (69/100)",
+      englishDesc: "C2 Proficient reading and C1 Advanced listening (June 2026).",
+      pythonCert: "Python University: Udemy (86.5 hrs)",
+      pythonDesc: "Advanced programming, data structures, object-oriented logic, and optimization (December 2024).",
+      verify: "Verify certificate"
     },
     contact: {
       title: "Contact Me",
