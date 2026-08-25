@@ -1,5 +1,5 @@
 import aboutImg from './recursos/personal.png'
-import cvFile from './recursos/CV_Brian_Pineda_Martinez.pdf'
+//import cvFile from './recursos/CV_Brian_Pineda_Martinez.pdf'
 import { translations } from './translations'
 import './App.css'
 
@@ -9,7 +9,7 @@ function AcercaDeMi({ lang }) {
     <div className="page-content">
       <h1>{t.title}</h1>
       <p>{t.description}</p>
-
+      
       <div className="cv-download-container">
         <a href={cvFile} target="_blank" rel="noopener noreferrer" className="btn-primary cv-btn">
           📄 {t.cvLink}
