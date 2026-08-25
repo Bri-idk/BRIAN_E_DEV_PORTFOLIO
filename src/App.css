@@ -690,16 +690,7 @@ body.dark-mode .project-card:hover {
   }
 }
 
-/* Acerca de Mí: CV & Certs Styles */
-.cv-download-container {
-  margin: 1.5rem 0 2rem;
-}
-
-.cv-btn {
-  text-decoration: none;
-  font-size: 1rem;
-}
-
+/* Acerca de Mí: Certs Styles */
 .about-section {
   margin-top: 3rem;
 }
