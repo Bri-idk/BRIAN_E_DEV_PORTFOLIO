@@ -54,7 +54,7 @@ body {
   transition: background-color 0.3s, color 0.3s;
 }
 
-button{
-  height: 2em;
-  font-size: 1.2rem;
+button {
+  font-family: inherit;
+  cursor: pointer;
 }

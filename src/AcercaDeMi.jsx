@@ -1,5 +1,4 @@
 import aboutImg from './recursos/personal.png'
-import cvFile from './recursos/CV_Brian_Pineda_Martinez.pdf'
 import { translations } from './translations'
 import './App.css'
 
@@ -9,12 +8,6 @@ function AcercaDeMi({ lang }) {
     <div className="page-content">
       <h1>{t.title}</h1>
       <p>{t.description}</p>
-
-      <div className="cv-download-container">
-        <a href={cvFile} target="_blank" rel="noopener noreferrer" className="btn-primary cv-btn">
-          📄 {t.cvLink}
-        </a>
-      </div>
 
       <div className="about-visual">
         <img src={aboutImg} alt="Espacio de trabajo" />
@@ -28,6 +21,22 @@ function AcercaDeMi({ lang }) {
       <section className="about-section certs-section">
         <h2>{t.certificationsTitle}</h2>
         <div className="certs-grid">
+          <div className="cert-card">
+            <div className="cert-icon">☕</div>
+            <div className="cert-info">
+              <h3>{t.bootcampCert}</h3>
+              <p>{t.bootcampDesc}</p>
+            </div>
+          </div>
+
+          <div className="cert-card">
+            <div className="cert-icon">🏢</div>
+            <div className="cert-info">
+              <h3>{t.javaCert}</h3>
+              <p>{t.javaDesc}</p>
+            </div>
+          </div>
+
           <div className="cert-card">
             <div className="cert-icon">🎓</div>
             <div className="cert-info">
