@@ -23,7 +23,7 @@ import toto1 from './recursos/totonik/totonik_2.jpeg'
 import toto2 from './recursos/totonik/totonik_3.jpeg'
 
 // Imports de imágenes para Jachar
-import jacharCover from './recursos/JaChar/openBlanco.png'
+import jacharCover from './recursos/JaChar/jachar_logoFondo.png'
 import jachar1 from './recursos/JaChar/changeFont.png'
 import jachar2 from './recursos/JaChar/changeFontSize.png'
 import jachar3 from './recursos/JaChar/fileSaved.png'
